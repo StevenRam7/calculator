@@ -1,4 +1,6 @@
 import './App.css';
+//import { Route, Routes } from "react-router-dom";
+import Math from './Math';
 
 function App() {
   return (
@@ -8,6 +10,9 @@ function App() {
           Calculator
         </h1>
         <body>
+         <div>
+           <Math />
+         </div>
         </body>
       </header>
     </div>
