@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.display {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  border-width: 1px;
+  border-style: solid;
+  border-color: bisque;
+  background-color: lightcyan;
+  color: black;
+  margin: 1px;
+  padding: 4px;
+}

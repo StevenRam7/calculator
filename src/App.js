@@ -1,6 +1,12 @@
 import './App.css';
 //import { Route, Routes } from "react-router-dom";
 import Math from './Math';
+import React from "react";
+
+export const Context = React.createContext({
+  selection: null,
+  setSelection: () => {},
+});
 
 function App() {
   return (

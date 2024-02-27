@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Context } from "./App";
 
 function Math() {
 //add functionality & classes to buttons
+const { setSelection } = useContext(Context);
+const [display1, setDisplay1] = useState(null)
+
     return (
         <div className="main">
+            <div className="display">
+                display
+            </div>
             <div className="row1">
                 <button>CLEAR</button>
                 <button>÷</button>
