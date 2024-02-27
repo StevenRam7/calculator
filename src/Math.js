@@ -17,30 +17,30 @@ function handleClick(num) {
                 {selection}
             </div>
             <div className="row1">
-                <button>CLEAR</button>
-                <button>÷</button>
+                <button className="operator" onClick={() => handleClick()}>CLEAR</button>
+                <button className="operator" onClick={() => handleClick("/")}>÷</button>
             </div>
            <div className="row2"></div>
-                <button onClick={() => handleClick(1)}>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>X</button>
+                <button className="number" onClick={() => handleClick(1)}>1</button>
+                <button className="number" onClick={() => handleClick(2)}>2</button>
+                <button className="number" onClick={() => handleClick(3)}>3</button>
+                <button className="operator" onClick={() => handleClick("*")}>X</button>
             <div className="row3">
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
+                <button className="number" onClick={() => handleClick(4)}>4</button>
+                <button className="number" onClick={() => handleClick(5)}>5</button>
+                <button className="number" onClick={() => handleClick(6)}>6</button>
+                <button className="operator" onClick={() => handleClick("-")}>-</button>
             </div>
             <div className="row4">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>+</button>
+                <button className="number" onClick={() => handleClick(7)}>7</button>
+                <button className="number" onClick={() => handleClick(8)}>8</button>
+                <button className="number" onClick={() => handleClick(9)}>9</button>
+                <button className="operator" onClick={() => handleClick("+")}>+</button>
             </div>
             <div className="row5"></div>
-                <button>0</button>
-                <button>.</button>
-                <button>=</button>
+                <button className="number" onClick={() => handleClick(0)}>0</button>
+                <button className="operator" onClick={() => handleClick(".")}>.</button>
+                <button className="operator" onClick={() => handleClick("=")}>=</button>
         </div>
     );
 }
