@@ -7,14 +7,14 @@ const { selection, setSelection } = useContext(Context);
 const [display1, setDisplay1] = useState(null)
 function handleClick(num) {
     console.log(num)
-    setSelection(num)
+    setDisplay1(num)
     console.log("selection = " + selection)
 }
 
     return (
         <div className="main">
             <div className="display">
-                {selection}
+                {display1}
             </div>
             <div className="row1">
                 <button className="operator" onClick={() => handleClick()}>CLEAR</button>
