@@ -3,20 +3,25 @@ import { Context } from "./App";
 
 function Math() {
 //add functionality & classes to buttons
-const { setSelection } = useContext(Context);
+const { selection, setSelection } = useContext(Context);
 const [display1, setDisplay1] = useState(null)
+function handleClick(num) {
+    console.log(num)
+    setSelection(num)
+    console.log("selection = " + selection)
+}
 
     return (
         <div className="main">
             <div className="display">
-                display
+                {selection}
             </div>
             <div className="row1">
                 <button>CLEAR</button>
                 <button>÷</button>
             </div>
            <div className="row2"></div>
-                <button>1</button>
+                <button onClick={() => handleClick(1)}>1</button>
                 <button>2</button>
                 <button>3</button>
                 <button>X</button>
