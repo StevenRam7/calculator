@@ -26,7 +26,8 @@ function handleOpClick(op) {
 }
 
 function performOp() {
-    //troubleshoot this function - shows result is null for all ops
+    //troubleshoot this function: shows result is null for all ops on first run
+    //after clearing and re-running op it shows result is 100
     if (operator === "/") {
         setResult(firstNum/secondNum)
     }
@@ -41,9 +42,16 @@ function performOp() {
         setResult(firstNum-secondNum)
     }
     else {
+        console.log(operator)
         setResult(100)
     }
     console.log("Result is " + result)
+}
+
+function handleClear() {
+    setFirstNum(null)
+    setSecondNum(null)
+    setOperator(null)
 }
 
     return (
@@ -52,7 +60,7 @@ function performOp() {
                 {firstNum} {operator} {secondNum}
             </div>
             <div className="row1">
-                <button className="operator" onClick={() => handleOpClick()}>CLEAR</button>
+                <button className="operator" onClick={() => handleClear()}>CLEAR</button>
                 <button className="operator" onClick={() => handleOpClick("/")}>÷</button>
             </div>
            <div className="row2"></div>
