@@ -10,12 +10,14 @@ const [operator, setOperator] = useState(null)
 function handleNumClick(num) {
     console.log(num)
     //setFirstNum(num)
-    //console.log("selection = " + selection)
-    if firstNum {
+    if (firstNum) {
         setSecondNum(num)
-        else setFirstNum(num)
     }
-}
+        else {
+           setFirstNum(num) 
+        } 
+    }
+
 function handleOpClick(op) {
     console.log("op = " + op)
     setOperator(op)
@@ -24,7 +26,7 @@ function handleOpClick(op) {
     return (
         <div className="main">
             <div className="display">
-                {firstNum}{operator}
+                {firstNum} {operator} {secondNum}
             </div>
             <div className="row1">
                 <button className="operator" onClick={() => handleOpClick()}>CLEAR</button>
