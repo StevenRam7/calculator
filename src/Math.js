@@ -4,17 +4,19 @@ import { Context } from "./App";
 function Math() {
 //add functionality & classes to buttons
 const { selection, setSelection } = useContext(Context);
-const [display1, setDisplay1] = useState(null)
+const [firstNum, setFirstNum] = useState(null)
+const [secondNum, setSecondNum] = useState(null)
+const [operator, setOperator] = useState(null)
 function handleClick(num) {
     console.log(num)
-    setDisplay1(num)
+    setFirstNum(num)
     console.log("selection = " + selection)
 }
 
     return (
         <div className="main">
             <div className="display">
-                {display1}
+                {firstNum}
             </div>
             <div className="row1">
                 <button className="operator" onClick={() => handleClick()}>CLEAR</button>
