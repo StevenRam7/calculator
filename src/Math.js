@@ -45,6 +45,9 @@ function performOp() {
         console.log(operator)
         setResult(100)
     }
+    setFirstNum(null)
+    setSecondNum(null)
+    setOperator(null)
     console.log("Result is " + result)
 }
 
@@ -52,12 +55,13 @@ function handleClear() {
     setFirstNum(null)
     setSecondNum(null)
     setOperator(null)
+    setResult(null)
 }
 
     return (
         <div className="main">
             <div className="display">
-                {firstNum} {operator} {secondNum}
+                {firstNum} {operator} {secondNum} {result}
             </div>
             <div className="row1">
                 <button className="operator" onClick={() => handleClear()}>CLEAR</button>
