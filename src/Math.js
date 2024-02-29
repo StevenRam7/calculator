@@ -7,8 +7,10 @@ const { selection, setSelection } = useContext(Context);
 const [firstNum, setFirstNum] = useState(null)
 const [secondNum, setSecondNum] = useState(null)
 const [operator, setOperator] = useState(null)
+const [result, setResult] = useState(null)
+
 function handleNumClick(num) {
-    console.log(num)
+    //console.log(num)
     //setFirstNum(num)
     if (firstNum) {
         setSecondNum(num)
@@ -19,8 +21,29 @@ function handleNumClick(num) {
     }
 
 function handleOpClick(op) {
-    console.log("op = " + op)
+    //console.log("op = " + op)
     setOperator(op)
+}
+
+function performOp() {
+    //troubleshoot this function - shows result is null for all ops
+    if (operator === "/") {
+        setResult(firstNum/secondNum)
+    }
+    if (operator === "*") {
+        console.log(firstNum * secondNum)
+        setResult(firstNum * secondNum)
+    }
+    if (operator === "+") {
+        setResult(firstNum+secondNum)
+    }
+    if (operator === "-") {
+        setResult(firstNum-secondNum)
+    }
+    else {
+        setResult(100)
+    }
+    console.log("Result is " + result)
 }
 
     return (
@@ -52,7 +75,7 @@ function handleOpClick(op) {
             <div className="row5"></div>
                 <button className="number" onClick={() => handleNumClick(0)}>0</button>
                 <button className="operator" onClick={() => handleOpClick(".")}>.</button>
-                <button className="operator" onClick={() => handleOpClick("=")}>=</button>
+                <button className="operator" onClick={() => performOp("=")}>=</button>
         </div>
     );
 }
