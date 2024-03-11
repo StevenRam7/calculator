@@ -21,34 +21,39 @@ function handleNumClick(num) {
     }
 
 function handleOpClick(op) {
-    //console.log("op = " + op)
+    console.log("op = " + op)
     setOperator(op)
 }
 
 function performOp() {
-    //troubleshoot this function: shows result is null for all ops on first run
-    //after clearing and re-running op it shows result is 100
+    console.log("operator is " + operator)
     if (operator === "/") {
-        setResult(firstNum/secondNum)
+        //should limit sig figs on result
+        const total = firstNum/secondNum
+        setResult(total)
     }
     if (operator === "*") {
-        console.log(firstNum * secondNum)
-        setResult(firstNum * secondNum)
+        const total = firstNum * secondNum
+        setResult(total)
+        console.log(total)
+        console.log("Result is " + result)
     }
     if (operator === "+") {
-        setResult(firstNum+secondNum)
+        const total = firstNum+secondNum
+        setResult(total)
     }
     if (operator === "-") {
-        setResult(firstNum-secondNum)
+        const total = firstNum-secondNum
+        setResult(total)
     }
-    else {
-        console.log(operator)
-        setResult(100)
-    }
+    //else {
+    //    console.log(operator)
+    //    setResult(100)
+    //}
+    //console.log("Result is " + result)
     setFirstNum(null)
     setSecondNum(null)
     setOperator(null)
-    console.log("Result is " + result)
 }
 
 function handleClear() {
