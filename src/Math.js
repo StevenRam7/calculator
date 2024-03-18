@@ -10,13 +10,11 @@ const [operator, setOperator] = useState(null)
 const [result, setResult] = useState(null)
 
 function handleNumClick(num) {
-    //console.log(num)
-    //setFirstNum(num)
     let finalNum = null;
     if (firstNum && operator && secondNum) {
         //for adding digits to second num
         finalNum = secondNum.toString() + num.toString()
-        setSecondNum(parseInt(finalNum))
+        setSecondNum(parseInt(finalNum.substring(0,8)))
         //console.log("yy is " + secondNum)
     }
     if (firstNum && operator && secondNum === null) {
@@ -26,7 +24,7 @@ function handleNumClick(num) {
     if (firstNum && operator === null) {
         //for adding digits to first num
         finalNum = firstNum.toString() + num.toString()
-        setFirstNum(parseInt(finalNum))
+        setFirstNum(parseInt(finalNum.substring(0,8)))
         //console.log("xx is " + firstNum)
     }
     if (firstNum === null && operator === null) {
@@ -43,9 +41,8 @@ function handleOpClick(op) {
 function performOp() {
     console.log("operator is " + operator)
     if (operator === "/") {
-        //should limit sig figs on result
         const total = firstNum/secondNum
-        setResult(total)
+        setResult(total.toPrecision(5))
     }
     if (operator === "*") {
         const total = firstNum * secondNum
