@@ -15,19 +15,25 @@ function handleNumClick(num) {
     let finalNum = null;
     if (firstNum && operator && secondNum) {
         //for adding digits to second num
+        finalNum = secondNum.toString() + num.toString()
+        setSecondNum(parseInt(finalNum))
+        //console.log("yy is " + secondNum)
     }
-    if (firstNum && operator) {
+    if (firstNum && operator && secondNum === null) {
         //starts the second num
         setSecondNum(num)
     }
     if (firstNum && operator === null) {
         //for adding digits to first num
+        finalNum = firstNum.toString() + num.toString()
+        setFirstNum(parseInt(finalNum))
+        //console.log("xx is " + firstNum)
     }
-    else {
+    if (firstNum === null && operator === null) {
         //starts the first num
-        setFirstNum(num) 
-    } 
+        setFirstNum(num)
     }
+}
 
 function handleOpClick(op) {
     console.log("op = " + op)
