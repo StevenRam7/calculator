@@ -12,12 +12,21 @@ const [result, setResult] = useState(null)
 function handleNumClick(num) {
     //console.log(num)
     //setFirstNum(num)
-    if (firstNum) {
+    let finalNum = null;
+    if (firstNum && operator && secondNum) {
+        //for adding digits to second num
+    }
+    if (firstNum && operator) {
+        //starts the second num
         setSecondNum(num)
     }
-        else {
-           setFirstNum(num) 
-        } 
+    if (firstNum && operator === null) {
+        //for adding digits to first num
+    }
+    else {
+        //starts the first num
+        setFirstNum(num) 
+    } 
     }
 
 function handleOpClick(op) {
