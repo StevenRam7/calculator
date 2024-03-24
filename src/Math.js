@@ -102,7 +102,7 @@ function handleClear() {
             </div>
             <div className="row5">
             <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(0)}>0</button>
-                <button className="operator" class="btn btn-secondary" onClick={() => handleOpClick(".")}>.</button>
+                <button className="decimal" class="btn btn-info" onClick={() => handleOpClick(".")}>.</button>
                 <button className="operator" class="btn btn-primary" onClick={() => performOp("=")}>=</button>
             </div>
             <div className="row6">
