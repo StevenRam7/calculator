@@ -17,9 +17,15 @@ code {
   border-width: 1px;
   border-style: solid;
   border-color: bisque;
-  background-color: lightcyan;
+  background-color: white;
   color: black;
   margin: 1px;
   padding: 4px;
+  font-size: larger;
+}
+
+button {
+  color: blueviolet;
+  ;
 }
 

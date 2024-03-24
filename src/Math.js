@@ -81,30 +81,33 @@ function handleClear() {
                 {firstNum} {operator} {secondNum} {result}
             </div>
             <div className="row1">
-                <button className="operator" class="btn btn-secondary" onClick={() => handleClear()}>CLEAR</button>
-                <button className="operator" class="btn btn-secondary" onClick={() => handleOpClick("/")}>÷</button>
+                <button className="operator" class="btn btn-primary" onClick={() => handleOpClick("*")}>X</button>
+                <button className="operator" class="btn btn-primary" onClick={() => handleOpClick("/")}>÷</button>
+                <button className="operator" class="btn btn-primary" onClick={() => handleOpClick("-")}>-</button>
+                <button className="operator" class="btn btn-primary" onClick={() => handleOpClick("+")}>+</button>
             </div>
            <div className="row2"></div>
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(1)}>1</button>
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(2)}>2</button>
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(3)}>3</button>
-                <button className="operator" class="btn btn-secondary" onClick={() => handleOpClick("*")}>X</button>
             <div className="row3">
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(4)}>4</button>
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(5)}>5</button>
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(6)}>6</button>
-                <button className="operator" class="btn btn-secondary" onClick={() => handleOpClick("-")}>-</button>
             </div>
             <div className="row4">
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(7)}>7</button>
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(8)}>8</button>
                 <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(9)}>9</button>
-                <button className="operator" class="btn btn-secondary" onClick={() => handleOpClick("+")}>+</button>
             </div>
-            <div className="row5"></div>
-                <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(0)}>0</button>
+            <div className="row5">
+            <button className="number" class="btn btn-secondary" onClick={() => handleNumClick(0)}>0</button>
                 <button className="operator" class="btn btn-secondary" onClick={() => handleOpClick(".")}>.</button>
-                <button className="operator" class="btn btn-secondary" onClick={() => performOp("=")}>=</button>
+                <button className="operator" class="btn btn-primary" onClick={() => performOp("=")}>=</button>
+            </div>
+            <div className="row6">
+                <button className="operator" class="btn btn-success btn-lg" onClick={() => handleClear()}>CLEAR</button>
+            </div>
         </div>
     );
 }
