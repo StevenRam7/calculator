@@ -1,5 +1,4 @@
 import './App.css';
-//import { Route, Routes } from "react-router-dom";
 import Math from './Math';
 import React from "react";
 

@@ -1,9 +1,7 @@
-import { useState, useContext } from "react";
-import { Context } from "./App";
+import { useState } from "react";
 
 function Math() {
 
-const { selection, setSelection } = useContext(Context);
 const [firstNum, setFirstNum] = useState(null)
 const [secondNum, setSecondNum] = useState(null)
 const [operator, setOperator] = useState(null)
@@ -15,7 +13,6 @@ function handleNumClick(num) {
         //for adding digits to second num
         finalNum = secondNum.toString() + num.toString()
         setSecondNum(parseInt(finalNum.substring(0,8)))
-        //console.log("yy is " + secondNum)
     }
     if (firstNum && operator && secondNum === null) {
         //starts the second num
@@ -25,7 +22,6 @@ function handleNumClick(num) {
         //for adding digits to first num
         finalNum = firstNum.toString() + num.toString()
         setFirstNum(parseInt(finalNum.substring(0,8)))
-        //console.log("xx is " + firstNum)
     }
     if (firstNum === null && operator === null) {
         //starts the first num
@@ -34,12 +30,10 @@ function handleNumClick(num) {
 }
 
 function handleOpClick(op) {
-    console.log("op = " + op)
     setOperator(op)
 }
 
 function performOp() {
-    console.log("operator is " + operator)
     if (operator === "/") {
         const total = firstNum/secondNum
         setResult(total.toPrecision(5))
@@ -47,8 +41,6 @@ function performOp() {
     if (operator === "*") {
         const total = firstNum * secondNum
         setResult(total)
-        console.log(total)
-        console.log("Result is " + result)
     }
     if (operator === "+") {
         const total = firstNum+secondNum
@@ -58,11 +50,6 @@ function performOp() {
         const total = firstNum-secondNum
         setResult(total)
     }
-    //else {
-    //    console.log(operator)
-    //    setResult(100)
-    //}
-    //console.log("Result is " + result)
     setFirstNum(null)
     setSecondNum(null)
     setOperator(null)
