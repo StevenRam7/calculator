@@ -1,6 +1,6 @@
 # Calculator
 
-A calculator for basic mathematical operations.
+A calculator for various basic math operations.
 
 ## Instructions
 
