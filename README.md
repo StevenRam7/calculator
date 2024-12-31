@@ -4,7 +4,7 @@ A calculator for various basic math operations.
 
 ## Instructions
 
-Run the command: `npm start`
+Navigate to the folder and run the command: `npm start`
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
